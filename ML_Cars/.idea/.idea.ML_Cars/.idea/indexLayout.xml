@@ -22,7 +22,10 @@
       <Path>Library</Path>
       <Path>Logs</Path>
       <Path>Temp</Path>
+      <Path>config</Path>
+      <Path>models</Path>
       <Path>obj</Path>
+      <Path>summaries</Path>
     </explicitExcludes>
   </component>
 </project>
