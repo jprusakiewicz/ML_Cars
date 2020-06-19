@@ -89,14 +89,14 @@ public class SimpleCarAgent : Agent
     {
         int reward = 0;
         var carCenter = transform.position + Vector3.up;
-
+        
         // Find what tile I'm on
-        if (Physics.Raycast(carCenter, Vector3.down, out var hit, 2f))
+        if (Physics.Raycast(carCenter, Vector3.down, out var hit, 5f))
         {
             var newHit = hit.transform;
             // Check if the tile has changed
             if (_track != null && newHit != _track)
-            {
+            {  
                 float angle = Vector3.Angle(_track.forward, newHit.position - _track.position);
                 reward = (angle < 90f) ? 1 : -1;
             }
