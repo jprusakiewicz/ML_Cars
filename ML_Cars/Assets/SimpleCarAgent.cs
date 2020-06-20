@@ -16,15 +16,17 @@ public class SimpleCarAgent : Agent
     private bool canDrive = false;
     [SerializeField]
     private RaceController raceController;
-
+    private int pointsToFinish = 22;
     private int numberOfLaps;
     public int score = 0;
     public bool resetOnCollision = true;
+    private Collider childCollider;
 
     private Transform _track;
 
     public override void Initialize()
     {
+        childCollider = GetComponentInChildren<Collider>();
         numberOfLaps = raceController.GetNumberOfLaps();
         GetTrackIncrement();
     }
@@ -57,10 +59,12 @@ public class SimpleCarAgent : Agent
         AddReward(bonus + reward);
 
         score += reward;
-        if (score > 23 * numberOfLaps)
+        if (score > pointsToFinish * numberOfLaps)
         {
-            GameObject.Find("RaceController").SendMessage("Finnish");
+            GameObject.Find("RaceController").SendMessage("EnemyFinnish");
             canDrive = false;
+            childCollider.enabled = false;
+            transform.Rotate (0,0,0);
         }
     }
 

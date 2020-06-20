@@ -7,6 +7,7 @@ public class RaceController : MonoBehaviour
 {
     public Text timer;
     public Text laps;
+    public Text countDown;
     private int lapCount = 1;
     private int currentLap = 0;
     private bool finnished = false;
@@ -14,6 +15,9 @@ public class RaceController : MonoBehaviour
     private bool canDrive = false;
     private string minutes = "0";
     private string _seconds = "0";
+    private int place = 0;
+    private string finaltime;
+    private bool playerfinished = false;
 
     private float startTime;
     // Start is called before the first frame update
@@ -35,6 +39,9 @@ public class RaceController : MonoBehaviour
             _seconds = (t % 60).ToString("f2");
             
         }
+        if(integer == 0)
+            countDown.gameObject.SetActive(false);
+        countDown.text = integer.ToString();
         timer.text = minutes + ":" + _seconds;
         laps.text = "lap: " + currentLap.ToString() + "/" + lapCount.ToString();
     }
@@ -53,7 +60,7 @@ public class RaceController : MonoBehaviour
         {
             //countdownImage.fillAmount = totalTime / duration;
             totalTime += Time.deltaTime;
-            integer = (int)totalTime; /* choose how to quantize this */
+            integer = 3 - (int)totalTime; /* choose how to quantize this */
             /* convert integer to string and assign to text */
             yield return null;
         }
@@ -74,6 +81,16 @@ public class RaceController : MonoBehaviour
     public void Finnish()
     {
         finnished = true;
-        timer.color = Color.yellow;
+        timer.color = Color.green;
+        finaltime = minutes + ":" + _seconds;
+        playerfinished = true;
+    }
+    public void EnemyFinnish()
+    {
+        if (!playerfinished)
+        {
+            place++;
+            timer.color = Color.red;
+        }
     }
 }
