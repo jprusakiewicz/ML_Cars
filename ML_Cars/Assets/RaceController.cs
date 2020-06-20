@@ -15,6 +15,12 @@ public class RaceController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        GameObject.Find("SportsCar_1").SendMessage("EnableControl");
+        GameObject.Find("SportsCar_2").SendMessage("EnableControl");
+        GameObject.Find("SportsCar_3").SendMessage("EnableControl");
+        GameObject.Find("SportsCar_4").SendMessage("EnableControl");
+        GameObject.Find("SportsCar_5").SendMessage("EnableControl");
+        GameObject.Find("SportsCar_player").SendMessage("EnableControl");
         startTime = Time.time;
     }
 
@@ -27,7 +33,8 @@ public class RaceController : MonoBehaviour
         string minutes = ((int) t / 60).ToString();
         string seconds = (t % 60).ToString("f2");
         timer.text = minutes + ":" + seconds;
-        laps.text = currentLap.ToString()+"/"+ lapCount.ToString();
+        laps.text = "lap: "+currentLap.ToString()+"/"+ lapCount.ToString();
+        
     }
 
     public int GetNumberOfLaps()

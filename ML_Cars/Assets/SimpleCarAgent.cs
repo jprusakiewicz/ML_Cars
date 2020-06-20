@@ -13,7 +13,7 @@ public class SimpleCarAgent : Agent
     
     public float speed = 10f;
     public float torque = 10f;
-    private bool canDrive = true;
+    private bool canDrive = false;
     [SerializeField]
     private RaceController raceController;
 
@@ -137,4 +137,10 @@ public class SimpleCarAgent : Agent
             EndEpisode();
         }
     }
+
+    private void EnableControl()
+    {
+        canDrive = true;
+    }
+    
 }

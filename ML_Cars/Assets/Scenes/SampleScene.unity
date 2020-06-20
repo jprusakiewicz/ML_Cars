@@ -712,20 +712,35 @@ PrefabInstance:
       propertyPath: m_CollisionDetection
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 4548842476828974201, guid: 8567787ef1c0f76459d51f35ff0fd393,
+        type: 3}
+      propertyPath: m_Drag
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 4548842476828974201, guid: 8567787ef1c0f76459d51f35ff0fd393,
+        type: 3}
+      propertyPath: m_AngularDrag
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4591263174445045381, guid: 8567787ef1c0f76459d51f35ff0fd393,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: f179340cc278f484f8074d7c67b9f4a0, type: 2}
+      objectReference: {fileID: 2100000, guid: 90dbfacbd0662bf4783ba4cc15862632, type: 2}
     - target: {fileID: 4604145868712106387, guid: 8567787ef1c0f76459d51f35ff0fd393,
         type: 3}
       propertyPath: m_Name
-      value: Sports (1)
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 4604145868712106387, guid: 8567787ef1c0f76459d51f35ff0fd393,
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4604287766112882437, guid: 8567787ef1c0f76459d51f35ff0fd393,
+        type: 3}
+      propertyPath: m_Name
+      value: SportsCar_player
       objectReference: {fileID: 0}
     - target: {fileID: 4606245443506729869, guid: 8567787ef1c0f76459d51f35ff0fd393,
         type: 3}
@@ -745,7 +760,7 @@ PrefabInstance:
     - target: {fileID: 4608208957068074491, guid: 8567787ef1c0f76459d51f35ff0fd393,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -94.84
+      value: -96.333
       objectReference: {fileID: 0}
     - target: {fileID: 4608208957068074491, guid: 8567787ef1c0f76459d51f35ff0fd393,
         type: 3}
@@ -1667,6 +1682,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4604287766112882437, guid: 8567787ef1c0f76459d51f35ff0fd393,
+        type: 3}
+      propertyPath: m_Name
+      value: SportsCar_4
+      objectReference: {fileID: 0}
     - target: {fileID: 4606245443506729869, guid: 8567787ef1c0f76459d51f35ff0fd393,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1685,7 +1705,7 @@ PrefabInstance:
     - target: {fileID: 4608208957068074491, guid: 8567787ef1c0f76459d51f35ff0fd393,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -94.84
+      value: -96.333
       objectReference: {fileID: 0}
     - target: {fileID: 4608208957068074491, guid: 8567787ef1c0f76459d51f35ff0fd393,
         type: 3}
@@ -1914,6 +1934,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4604287766112882437, guid: 8567787ef1c0f76459d51f35ff0fd393,
+        type: 3}
+      propertyPath: m_Name
+      value: SportsCar_5
+      objectReference: {fileID: 0}
     - target: {fileID: 4606245443506729869, guid: 8567787ef1c0f76459d51f35ff0fd393,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1932,7 +1957,7 @@ PrefabInstance:
     - target: {fileID: 4608208957068074491, guid: 8567787ef1c0f76459d51f35ff0fd393,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -94.84
+      value: -96.333
       objectReference: {fileID: 0}
     - target: {fileID: 4608208957068074491, guid: 8567787ef1c0f76459d51f35ff0fd393,
         type: 3}
@@ -4404,6 +4429,11 @@ PrefabInstance:
       propertyPath: m_CollisionDetection
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 4591263174445045381, guid: 8567787ef1c0f76459d51f35ff0fd393,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f179340cc278f484f8074d7c67b9f4a0, type: 2}
     - target: {fileID: 4604145868712106387, guid: 8567787ef1c0f76459d51f35ff0fd393,
         type: 3}
       propertyPath: m_Name
@@ -4413,6 +4443,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4604287766112882437, guid: 8567787ef1c0f76459d51f35ff0fd393,
+        type: 3}
+      propertyPath: m_Name
+      value: SportsCar_3
       objectReference: {fileID: 0}
     - target: {fileID: 4606245443506729869, guid: 8567787ef1c0f76459d51f35ff0fd393,
         type: 3}
@@ -4432,7 +4467,7 @@ PrefabInstance:
     - target: {fileID: 4608208957068074491, guid: 8567787ef1c0f76459d51f35ff0fd393,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -94.84
+      value: -96.333
       objectReference: {fileID: 0}
     - target: {fileID: 4608208957068074491, guid: 8567787ef1c0f76459d51f35ff0fd393,
         type: 3}
@@ -5902,6 +5937,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4604287766112882437, guid: 8567787ef1c0f76459d51f35ff0fd393,
+        type: 3}
+      propertyPath: m_Name
+      value: SportsCar_2
+      objectReference: {fileID: 0}
     - target: {fileID: 4606245443506729869, guid: 8567787ef1c0f76459d51f35ff0fd393,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5920,7 +5960,7 @@ PrefabInstance:
     - target: {fileID: 4608208957068074491, guid: 8567787ef1c0f76459d51f35ff0fd393,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -94.84
+      value: -96.333
       objectReference: {fileID: 0}
     - target: {fileID: 4608208957068074491, guid: 8567787ef1c0f76459d51f35ff0fd393,
         type: 3}
@@ -7757,6 +7797,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4604287766112882437, guid: 8567787ef1c0f76459d51f35ff0fd393,
+        type: 3}
+      propertyPath: m_Name
+      value: SportsCar_1
+      objectReference: {fileID: 0}
     - target: {fileID: 4606245443506729869, guid: 8567787ef1c0f76459d51f35ff0fd393,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7775,7 +7820,7 @@ PrefabInstance:
     - target: {fileID: 4608208957068074491, guid: 8567787ef1c0f76459d51f35ff0fd393,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -94.84
+      value: -96.333
       objectReference: {fileID: 0}
     - target: {fileID: 4608208957068074491, guid: 8567787ef1c0f76459d51f35ff0fd393,
         type: 3}
