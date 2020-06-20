@@ -59,7 +59,7 @@ public class SimpleCarAgent : Agent
         AddReward(bonus + reward);
 
         score += reward;
-        if (score > pointsToFinish * numberOfLaps)
+        if (score > pointsToFinish * numberOfLaps && canDrive)
         {
             GameObject.Find("RaceController").SendMessage("EnemyFinnish");
             canDrive = false;

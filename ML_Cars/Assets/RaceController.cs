@@ -1,13 +1,19 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class RaceController : MonoBehaviour
 {
+    public Text timer_info;
+    public Text endTime_info;
     public Text timer;
+    public Text endTime;
     public Text laps;
+    public Text txt_place;
     public Text countDown;
+    public RawImage bg;
     private int lapCount = 1;
     private int currentLap = 0;
     private bool finnished = false;
@@ -18,13 +24,25 @@ public class RaceController : MonoBehaviour
     private int place = 0;
     private string finaltime;
     private bool playerfinished = false;
-
+    public Button ButtonPA;
     private float startTime;
     // Start is called before the first frame update
     void Start()
     {
+        timer_info.gameObject.SetActive(false);
+        endTime_info.gameObject.SetActive(false);
+        bg.gameObject.SetActive(false);
+        endTime.gameObject.SetActive(false);
+        ButtonPA.gameObject.SetActive(false);
+        txt_place.gameObject.SetActive(false);
         StartCoroutine("Countdown");
+        ButtonPA.onClick.AddListener(TaskOnClick);
 
+    }
+
+    private void TaskOnClick()
+    {
+        SceneManager.LoadScene("SampleScene", LoadSceneMode.Single);
     }
 
     // Update is called once per frame
@@ -80,10 +98,19 @@ public class RaceController : MonoBehaviour
 
     public void Finnish()
     {
+        currentLap++;
         finnished = true;
         timer.color = Color.green;
         finaltime = minutes + ":" + _seconds;
         playerfinished = true;
+        bg.gameObject.SetActive(true);
+        ButtonPA.gameObject.SetActive(true);
+        endTime.text = finaltime;
+        endTime.gameObject.SetActive(true);
+        txt_place.text = (place+1).ToString("f0");
+        txt_place.gameObject.SetActive(true);
+        timer_info.gameObject.SetActive(true);
+        endTime_info.gameObject.SetActive(true);
     }
     public void EnemyFinnish()
     {
