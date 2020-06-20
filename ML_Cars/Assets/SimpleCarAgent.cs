@@ -57,8 +57,11 @@ public class SimpleCarAgent : Agent
         AddReward(bonus + reward);
 
         score += reward;
-        if (score > 23*numberOfLaps)
+        if (score > 23 * numberOfLaps)
+        {
+            GameObject.Find("RaceController").SendMessage("Finnish");
             canDrive = false;
+        }
     }
 
     public override void Heuristic(float[] actionsOut)
