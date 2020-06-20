@@ -98,7 +98,8 @@ public class RaceController : MonoBehaviour
 
     public void Finnish()
     {
-        currentLap++;
+        ++currentLap;
+        laps.text = "lap: " + currentLap.ToString() + "/" + lapCount.ToString();
         finnished = true;
         timer.color = Color.green;
         finaltime = minutes + ":" + _seconds;

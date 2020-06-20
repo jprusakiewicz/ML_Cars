@@ -24,7 +24,9 @@
           </e>
         </e>
         <e p="PlayerController.cs" t="Include" />
+        <e p="PlayGame.cs" t="Include" />
         <e p="RaceController.cs" t="Include" />
+        <e p="rotateCar.cs" t="Include" />
         <e p="SimpleCarAgent.cs" t="Include" />
         <e p="TrackGizmos.cs" t="Include" />
       </e>
