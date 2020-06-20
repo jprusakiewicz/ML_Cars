@@ -6,7 +6,9 @@ using UnityEngine.UI;
 public class RaceController : MonoBehaviour
 {
     public Text timer;
+    public Text laps;
     private int lapCount = 1;
+    private int currentLap = 0;
     private bool finnished = false; 
 
     private float startTime;
@@ -25,6 +27,7 @@ public class RaceController : MonoBehaviour
         string minutes = ((int) t / 60).ToString();
         string seconds = (t % 60).ToString("f2");
         timer.text = minutes + ":" + seconds;
+        laps.text = currentLap.ToString()+"/"+ lapCount.ToString();
     }
 
     public int GetNumberOfLaps()
