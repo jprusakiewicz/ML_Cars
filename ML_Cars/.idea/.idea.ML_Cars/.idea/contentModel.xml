@@ -23,6 +23,7 @@
             <e p="LPPV_VButton.cs" t="Include" />
           </e>
         </e>
+        <e p="RaceController.cs" t="Include" />
         <e p="SimpleCarAgent.cs" t="Include" />
         <e p="TrackGizmos.cs" t="Include" />
       </e>

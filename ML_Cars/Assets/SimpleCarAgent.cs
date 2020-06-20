@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using Unity.Mathematics;
 using Unity.MLAgents;
 using Unity.MLAgents.Sensors;
+using UnityEditor;
 using UnityEngine;
 
 
@@ -12,7 +13,11 @@ public class SimpleCarAgent : Agent
     
     public float speed = 10f;
     public float torque = 10f;
+    private bool canDrive = true;
+    [SerializeField]
+    private RaceController raceController;
 
+    private int numberOfLaps;
     public int score = 0;
     public bool resetOnCollision = true;
 
@@ -20,16 +25,20 @@ public class SimpleCarAgent : Agent
 
     public override void Initialize()
     {
+        numberOfLaps = raceController.GetNumberOfLaps();
         GetTrackIncrement();
     }
 
-    private void MoveCar(float horizontal, float vertical, float dt)
+    private void MoveCar(float horizontal, float vertical, float dt, bool can_drive)
     {
-        float distance = speed * vertical;
-        transform.Translate(distance * dt * Vector3.forward);
+        if (can_drive)
+        {
+            float distance = speed * vertical;
+            transform.Translate(distance * dt * Vector3.forward);
 
-        float rotation = horizontal * torque * 90f;
-        transform.Rotate(0f, rotation * dt, 0f);
+            float rotation = horizontal * torque * 90f;
+            transform.Rotate(0f, rotation * dt, 0f);
+        }
     }
 
     public override void OnActionReceived(float[] vectorAction)
@@ -38,7 +47,7 @@ public class SimpleCarAgent : Agent
         float vertical = vectorAction[1];
 
         var lastPos = transform.position;
-        MoveCar(horizontal, vertical, Time.fixedDeltaTime);
+        MoveCar(horizontal, vertical, Time.fixedDeltaTime, canDrive);
 
         int reward = GetTrackIncrement();
         
@@ -48,6 +57,8 @@ public class SimpleCarAgent : Agent
         AddReward(bonus + reward);
 
         score += reward;
+        if (score > 23*numberOfLaps)
+            canDrive = false;
     }
 
     public override void Heuristic(float[] actionsOut)
@@ -103,7 +114,6 @@ public class SimpleCarAgent : Agent
 
             _track = newHit;
         }
-
         return reward;
     }
 
