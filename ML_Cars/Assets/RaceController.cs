@@ -42,7 +42,7 @@ public class RaceController : MonoBehaviour
 
     private void TaskOnClick()
     {
-        SceneManager.LoadScene("SampleScene", LoadSceneMode.Single);
+        SceneManager.LoadScene("mainScene", LoadSceneMode.Single);
     }
 
     // Update is called once per frame
