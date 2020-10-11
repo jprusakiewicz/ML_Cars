@@ -14,7 +14,7 @@ public class PlayGame : MonoBehaviour
     }
     private void TaskOnClick()
     {
-        SceneManager.LoadScene("mainScene", LoadSceneMode.Single);
+        SceneManager.LoadScene("MainScene", LoadSceneMode.Single);
     }
     // Update is called once per frame
 }

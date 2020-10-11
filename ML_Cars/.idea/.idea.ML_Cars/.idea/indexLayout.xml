@@ -21,8 +21,8 @@
       <Path>.idea</Path>
       <Path>Library</Path>
       <Path>Logs</Path>
-      <Path>Temp</Path>
       <Path>builds</Path>
+      <Path>builds2</Path>
       <Path>config</Path>
       <Path>models</Path>
       <Path>obj</Path>
