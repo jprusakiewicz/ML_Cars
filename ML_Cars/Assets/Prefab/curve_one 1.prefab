@@ -89,6 +89,8 @@ GameObject:
   m_Component:
   - component: {fileID: 902843745609708487}
   - component: {fileID: 6334074383937817272}
+  - component: {fileID: 1980826429281597315}
+  - component: {fileID: 7304224880541823742}
   m_Layer: 0
   m_Name: curve_one 1
   m_TagString: Untagged
@@ -125,6 +127,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90049472436eca94698046d4c55eb5f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!65 &1980826429281597315
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4241496132253450708}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 19.786423}
+  m_Center: {x: 9.76, y: 0, z: -0.5019665}
+--- !u!65 &7304224880541823742
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4241496132253450708}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 20, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: -10}
 --- !u!1 &6417048541431478294
 GameObject:
   m_ObjectHideFlags: 0

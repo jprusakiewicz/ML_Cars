@@ -21,11 +21,13 @@ public class SimpleCarAgent : Agent
     public int score = 0;
     public bool resetOnCollision = true;
     private Collider childCollider;
+    public Rigidbody rb;
 
     private Transform _track;
 
     public override void Initialize()
     {
+        rb = GetComponent<Rigidbody>();
         childCollider = GetComponentInChildren<Collider>();
         numberOfLaps = raceController.GetNumberOfLaps();
         GetTrackIncrement();
@@ -63,8 +65,9 @@ public class SimpleCarAgent : Agent
         {
             GameObject.Find("RaceController").SendMessage("EnemyFinnish");
             canDrive = false;
-            childCollider.enabled = false;
-            transform.Rotate (0,0,0);
+            rb.detectCollisions = false;
+            rb.constraints = RigidbodyConstraints.FreezePosition;
+            rb.constraints = RigidbodyConstraints.FreezeRotation;
         }
     }
 

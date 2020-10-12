@@ -809,6 +809,11 @@ PrefabInstance:
       propertyPath: m_AngularDrag
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4548842476828974201, guid: 8567787ef1c0f76459d51f35ff0fd393,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4591263174445045381, guid: 8567787ef1c0f76459d51f35ff0fd393,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -1169,7 +1174,7 @@ PrefabInstance:
     - target: {fileID: 902843745609708487, guid: 091cfbbcf6888154e8b3fd9ded956928,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -10.74
+      value: -11.1
       objectReference: {fileID: 0}
     - target: {fileID: 902843745609708487, guid: 091cfbbcf6888154e8b3fd9ded956928,
         type: 3}
@@ -2947,7 +2952,28 @@ PrefabInstance:
       propertyPath: m_TagString
       value: tile
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 8138503856971628208, guid: 9dea3c272ea0d004eabcfcb0b96f4dac,
+        type: 3}
+      propertyPath: m_Size.z
+      value: 11.365613
+      objectReference: {fileID: 0}
+    - target: {fileID: 8138503856971628208, guid: 9dea3c272ea0d004eabcfcb0b96f4dac,
+        type: 3}
+      propertyPath: m_Center.x
+      value: 2.1411926e-15
+      objectReference: {fileID: 0}
+    - target: {fileID: 8138503856971628208, guid: 9dea3c272ea0d004eabcfcb0b96f4dac,
+        type: 3}
+      propertyPath: m_Center.z
+      value: 5.182804
+      objectReference: {fileID: 0}
+    - target: {fileID: 8138503856971628208, guid: 9dea3c272ea0d004eabcfcb0b96f4dac,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 8138503856971628208, guid: 9dea3c272ea0d004eabcfcb0b96f4dac, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 9dea3c272ea0d004eabcfcb0b96f4dac, type: 3}
 --- !u!1 &636163655
 GameObject:
@@ -5172,6 +5198,7 @@ MonoBehaviour:
   raceController: {fileID: 0}
   score: 0
   resetOnCollision: 0
+  rb: {fileID: 0}
 --- !u!54 &1122759417
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5474,6 +5501,38 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1192916677}
   m_CullTransparentMesh: 0
+--- !u!1 &1214573708 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4241496132253450708, guid: 091cfbbcf6888154e8b3fd9ded956928,
+    type: 3}
+  m_PrefabInstance: {fileID: 194390232}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1214573710
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1214573708}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 20.720533, y: 1, z: 0.82174283}
+  m_Center: {x: -1.7342925, y: 0, z: -9.984308}
+--- !u!65 &1214573711
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1214573708}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.99999976, y: 1, z: 19.786423}
+  m_Center: {x: 8.23, y: 0, z: -0.5019665}
 --- !u!1 &1216284802
 GameObject:
   m_ObjectHideFlags: 0
@@ -5862,11 +5921,12 @@ MonoBehaviour:
     maxStep: 0
   hasUpgradedFromAgentParameters: 1
   MaxStep: 0
-  speed: 36
+  speed: 35
   torque: 3
   raceController: {fileID: 427931438}
   score: 0
   resetOnCollision: 0
+  rb: {fileID: 0}
 --- !u!1 &1402458890
 GameObject:
   m_ObjectHideFlags: 0
@@ -6120,6 +6180,7 @@ MonoBehaviour:
   raceController: {fileID: 0}
   score: 0
   resetOnCollision: 0
+  rb: {fileID: 0}
 --- !u!54 &1461429530
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -6703,6 +6764,25 @@ WheelCollider:
     m_AsymptoteValue: 0.75
     m_Stiffness: 1
   m_Enabled: 1
+--- !u!1 &1650355830 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8138503856971628214, guid: 9dea3c272ea0d004eabcfcb0b96f4dac,
+    type: 3}
+  m_PrefabInstance: {fileID: 631673451}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1650355832
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1650355830}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.0000002, y: 1, z: 1.0000002}
+  m_Center: {x: -0.00000023841858, y: 0, z: 0}
 --- !u!1 &1655771938 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 821956148914770384, guid: 091cfbbcf6888154e8b3fd9ded956928,
@@ -6938,6 +7018,7 @@ MonoBehaviour:
   raceController: {fileID: 0}
   score: 0
   resetOnCollision: 0
+  rb: {fileID: 0}
 --- !u!54 &1743836135
 Rigidbody:
   m_ObjectHideFlags: 0

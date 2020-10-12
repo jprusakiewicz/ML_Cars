@@ -20,12 +20,14 @@ public class PlayerController : Agent
     private int numberOfLaps;
     public int score = 0;
     public bool resetOnCollision = true;
+    public Rigidbody rb;
 
     private Transform _track;
 
     public override void Initialize()
     {
         numberOfLaps = raceController.GetNumberOfLaps();
+        rb = GetComponent<Rigidbody>();
         GetTrackIncrement();
     }
 
@@ -33,6 +35,10 @@ public class PlayerController : Agent
     {
         if (can_drive)
         {
+            if (horizontal <= 0.01 && vertical <= 0.01)
+            {
+                rb.velocity = Vector3.Slerp(rb.velocity, Vector3.zero, Time.deltaTime);
+            }
             float distance = speed * vertical;
             transform.Translate(distance * dt * Vector3.forward);
 
@@ -59,9 +65,11 @@ public class PlayerController : Agent
         score += reward;
         if (score > pointsToFinish * numberOfLaps && canDrive)
         {
+            rb.constraints = RigidbodyConstraints.FreezePosition;
+            rb.constraints = RigidbodyConstraints.FreezeRotation;
             GameObject.Find("RaceController").SendMessage("Finnish");
             canDrive = false;
-            transform.Rotate (0,0,0);
+            rb.detectCollisions = false;
         }
     }
 

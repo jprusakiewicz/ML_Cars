@@ -64,11 +64,6 @@ public class RaceController : MonoBehaviour
         laps.text = "lap: " + currentLap.ToString() + "/" + lapCount.ToString();
     }
 
-    // private void CountDown()
-    // {
-    //     
-    // }
-
     IEnumerator Countdown()
     {
         float duration = 3f; // 3 seconds you can change this to
